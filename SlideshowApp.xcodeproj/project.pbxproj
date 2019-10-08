@@ -13,6 +13,10 @@
 		B3852501234C683900F68261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3852500234C683900F68261 /* Assets.xcassets */; };
 		B3852504234C683900F68261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3852502234C683900F68261 /* LaunchScreen.storyboard */; };
 		B385250F234C683900F68261 /* SlideshowAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385250E234C683900F68261 /* SlideshowAppTests.swift */; };
+		B385251A234C6DD100F68261 /* KakudaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3852519234C6DD100F68261 /* KakudaiViewController.swift */; };
+		B385251C234C6F9700F68261 /* path-4518094_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B385251B234C6F9700F68261 /* path-4518094_1280.jpg */; };
+		B385251E234CE19800F68261 /* landscape-4518195_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B385251D234CE19700F68261 /* landscape-4518195_1280.jpg */; };
+		B3852520234CE19F00F68261 /* volcano-4493461_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B385251F234CE19F00F68261 /* volcano-4493461_1280.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		B385250A234C683900F68261 /* SlideshowAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideshowAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B385250E234C683900F68261 /* SlideshowAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideshowAppTests.swift; sourceTree = "<group>"; };
 		B3852510234C683900F68261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3852519234C6DD100F68261 /* KakudaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakudaiViewController.swift; sourceTree = "<group>"; };
+		B385251B234C6F9700F68261 /* path-4518094_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "path-4518094_1280.jpg"; sourceTree = "<group>"; };
+		B385251D234CE19700F68261 /* landscape-4518195_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "landscape-4518195_1280.jpg"; sourceTree = "<group>"; };
+		B385251F234CE19F00F68261 /* volcano-4493461_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "volcano-4493461_1280.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,10 @@
 			children = (
 				B38524F9234C683700F68261 /* AppDelegate.swift */,
 				B38524FB234C683700F68261 /* ViewController.swift */,
+				B3852519234C6DD100F68261 /* KakudaiViewController.swift */,
+				B385251B234C6F9700F68261 /* path-4518094_1280.jpg */,
+				B385251D234CE19700F68261 /* landscape-4518195_1280.jpg */,
+				B385251F234CE19F00F68261 /* volcano-4493461_1280.jpg */,
 				B38524FD234C683700F68261 /* Main.storyboard */,
 				B3852500234C683900F68261 /* Assets.xcassets */,
 				B3852502234C683900F68261 /* LaunchScreen.storyboard */,
@@ -179,7 +191,10 @@
 			files = (
 				B3852504234C683900F68261 /* LaunchScreen.storyboard in Resources */,
 				B3852501234C683900F68261 /* Assets.xcassets in Resources */,
+				B385251E234CE19800F68261 /* landscape-4518195_1280.jpg in Resources */,
+				B3852520234CE19F00F68261 /* volcano-4493461_1280.jpg in Resources */,
 				B38524FF234C683700F68261 /* Main.storyboard in Resources */,
+				B385251C234C6F9700F68261 /* path-4518094_1280.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B385251A234C6DD100F68261 /* KakudaiViewController.swift in Sources */,
 				B38524FC234C683700F68261 /* ViewController.swift in Sources */,
 				B38524FA234C683700F68261 /* AppDelegate.swift in Sources */,
 			);
