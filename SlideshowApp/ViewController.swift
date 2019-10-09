@@ -67,6 +67,7 @@ class ViewController: UIViewController {
         
     }
     //進むボタン
+    @IBOutlet weak var Advance: UIButton!
     @IBAction func Advance(_ sender: Any) {
         if value >= 3 {
             value = 1
@@ -79,6 +80,7 @@ class ViewController: UIViewController {
     }
     }
     //戻るボタン
+    @IBOutlet weak var back: UIButton!
     @IBAction func back(_ sender: Any) {
         if value <= 1 {
             value = 3
@@ -91,6 +93,7 @@ class ViewController: UIViewController {
         }
     }
     //再生・停止ボタン
+   
     @IBAction func goAndPause(_ sender: Any) {
         
         // タップするとボタンの表示が停止になる
@@ -101,9 +104,9 @@ class ViewController: UIViewController {
             let button = sender as! UIButton
             button.setTitle("停止", for: .normal)
             //進むボタンをタップ可能にする
-          
+            Advance.isEnabled = false
             //停止ボタンをタップ可能にする
-           
+            back.isEnabled = false
             
         } else {
         //値があればタイマー停止
@@ -114,8 +117,9 @@ class ViewController: UIViewController {
             button.setTitle("再生", for: .normal)
          
             //進むボタンをタップ不可にする
+             Advance.isEnabled = true
             //停止ボタンをタップ不可にする
-            
+             back.isEnabled = true
     }
     
     }
