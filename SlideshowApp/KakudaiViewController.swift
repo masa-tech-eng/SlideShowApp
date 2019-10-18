@@ -11,7 +11,7 @@ import UIKit
 class KakudaiViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-
+    
     var bigimage = UIImage(named: "path-4518094_1280.jpg")
     
     override func viewDidLoad() {

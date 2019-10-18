@@ -24,9 +24,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="LHR-Oe-08K"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="aGd-Wn-qaY" appends="YES" id="V4a-vd-7kd"/>
-                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UG-lo-jJC">
                                 <rect key="frame" x="94.5" y="623" width="31" height="30"/>
@@ -51,6 +48,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="BPw-Wq-FcP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="266" id="4dY-io-0fg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nc3-4J-OMH" secondAttribute="trailing" constant="66.5" id="4e0-0b-UeB"/>
@@ -65,18 +63,21 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YW6-0d-rse" secondAttribute="bottom" constant="209" id="qfR-o5-2qq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0dT-XM-8Nh" appends="YES" id="tbT-aq-Zpd"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="Advance" destination="0UG-lo-jJC" id="vjg-SS-9zV"/>
                         <outlet property="back" destination="YW6-0d-rse" id="sON-CG-USG"/>
+                        <outlet property="goAndPause" destination="Nc3-4J-OMH" id="6bx-2N-MaF"/>
                         <outlet property="imageView" destination="BPw-Wq-FcP" id="XYd-rY-iYw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="aGd-Wn-qaY">
+                <tapGestureRecognizer id="0dT-XM-8Nh">
                     <connections>
-                        <action selector="tapAction:" destination="BYZ-38-t0r" id="W10-8h-ynz"/>
-                        <segue destination="Tsh-je-3E6" kind="show" id="EdK-O7-ogh"/>
+                        <segue destination="Tsh-je-3E6" kind="show" id="8lY-l1-kyD"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

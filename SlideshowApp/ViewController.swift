@@ -37,28 +37,41 @@ class ViewController: UIViewController {
             let image = sightImage ["image\(value)"]
             imageView.image = image as? UIImage
         } else {
-        value += 1
-        let image = sightImage ["image\(value)"]
-        imageView.image = image as? UIImage
+            value += 1
+            let image = sightImage ["image\(value)"]
+            imageView.image = image as? UIImage
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare( for segue: UIStoryboardSegue, sender: Any?) {
         //segueから遷移先のResultViewControllerを取得する
         let kakudaiViewController:KakudaiViewController = segue.destination as! KakudaiViewController
         //遷移先のKakudaiViewControllerで宣言しているbigimageに値を代入して渡す
         kakudaiViewController.bigimage = sightImage["image\(value)"]!
+        
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+            let button = goAndPause!
+            button.setTitle("再生", for: .normal)
+            //進むボタンをタップ可能にする
+            Advance.isEnabled = true
+            //停止ボタンをタップ可能にする
+            back.isEnabled = true
+        }
     }
+    
     //進むボタン
     @IBOutlet weak var Advance: UIButton!
+    
     @IBAction func Advance(_ sender: Any) {
         if value >= 3 {
             value = 1
             let image = sightImage ["image\(value)"]
             imageView.image = image as? UIImage
         } else {
-       value += 1
-        let image = sightImage ["image\(value)"]
-        imageView.image = image as? UIImage
+            value += 1
+            let image = sightImage ["image\(value)"]
+            imageView.image = image as? UIImage
         }
     }
     //戻るボタン
@@ -69,32 +82,34 @@ class ViewController: UIViewController {
             let image = sightImage ["image\(value)"]
             imageView.image = image as? UIImage
         } else{
-        value -= 1
-        let image = sightImage ["image\(value)"]
-        imageView.image = image as? UIImage
+            value -= 1
+            let image = sightImage ["image\(value)"]
+            imageView.image = image as? UIImage
         }
     }
     //再生・停止ボタン
+    
+    @IBOutlet weak var goAndPause: UIButton!
     @IBAction func goAndPause(_ sender: Any) {
         if self.timer == nil {
             self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
             //ボタンを停止ボタンに変更する
             let button = sender as! UIButton
             button.setTitle("停止", for: .normal)
-            //進むボタンをタップ可能にする
+            //進むボタンをタップ不可にする
             Advance.isEnabled = false
-            //停止ボタンをタップ可能にする
+            //停止ボタンをタップ不可にする
             back.isEnabled = false
         } else {
-        //値があればタイマー停止
+            //値があればタイマー停止
             self.timer.invalidate() //タイマーを停止
             self.timer = nil
             let button = sender as! UIButton
             button.setTitle("再生", for: .normal)
-            //進むボタンをタップ不可にする
-             Advance.isEnabled = true
-            //停止ボタンをタップ不可にする
-             back.isEnabled = true
+            //進むボタンをタップ可能にする
+            Advance.isEnabled = true
+            //停止ボタンをタップ可能にする
+            back.isEnabled = true
         }
     }
 }
