@@ -51,8 +51,7 @@ class ViewController: UIViewController {
         if self.timer != nil {
             self.timer.invalidate()
             self.timer = nil
-            let button = goAndPause!
-            button.setTitle("再生", for: .normal)
+            self.goAndPause.setTitle("再生", for: .normal)
             //進むボタンをタップ可能にする
             Advance.isEnabled = true
             //停止ボタンをタップ可能にする
